@@ -14,7 +14,7 @@ weather.addEventListener('submit',(e)=>{
 	message.textContent='loading...'
 	message2.textContent=''
 	
-fetch(`http://localhost:3000/products?address=${location}`).then((response)=>{
+fetch(`/products?address=${location}`).then((response)=>{
 	response.json().then((data)=>{
 		if(data.error){
 			message.textContent=data.error

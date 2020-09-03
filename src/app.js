@@ -8,6 +8,8 @@ const forecast=require('./utils/forcast')
 const htmlfile=path.join(__dirname,'../public')
 const viewpath=path.join(__dirname,'../templates/views')
 const partialspath=path.join(__dirname,'../templates/partials')
+const port=process.env.PORT||3000
+
 
 
 app.set('view engine', 'hbs');
@@ -101,6 +103,6 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen(3000,()=>{
-	console.log('server is up on the port')
+app.listen(port,()=>{
+	console.log('server is up on the '+ port)
 })
