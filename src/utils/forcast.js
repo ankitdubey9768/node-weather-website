@@ -10,7 +10,7 @@ const forcast=(latitude,longitude,callback)=>{
 			callback('dont know what to do',undefined)
 		}
 		else{
-			callback(undefined,'it is currently ' + body.current.temperature + ' degree out. It feels like ' + body.current.weather_descriptions
+			callback(undefined,'it is currently ' + body.current.temperature + ' degree out. It feels like ' + body.current.weather_descriptions+ " it's humidity is about "+body.current.humidity
 				
 			)
 		}
